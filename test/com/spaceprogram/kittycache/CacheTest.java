@@ -19,7 +19,7 @@ public class CacheTest {
         Assert.assertEquals(s, cache.get("x"));
         Assert.assertEquals(1, cache.size());
 
-        Object o = cache.remove("x");
+        Object o = cache.removeAndGet("x");
         Assert.assertEquals(o, s);
 
         Assert.assertEquals(0, cache.size());

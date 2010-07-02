@@ -80,9 +80,9 @@ public class KittyCache implements KCache {
         Object[] entry = cache.remove(key);
 //        System.out.println("entry=" + entry);
         if (entry != null) {
+            size.decrementAndGet();
             return entry[1];
         }
-        size.decrementAndGet();
         return null;
     }
 
